@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+
+    <link rel="stylesheet" href="ecom.css">
+
+    <!--- Fontawesome icons for LinkedIn and social icons -->
+
+    <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+
+    <!--- Reference, to use a google font called "Cambay" on our webpage -->
+
+    <link href='https://fonts.googleapis.com/css?family=Cambay' rel='stylesheet'>
+
+    <script src="ecom.js"></script>
+
+</head>
+<body>
+
+    <!--- Code written by - Minn, Contributed and Edited by Rohit, Tauqeer, and Hamza -->
+
+    <header>
+        <div>
+            <nav>
+                
+                <ol class="topbar">
+
+                    <li>
+                        <img src="banner-logo.jpg" alt="" class="banner_logo">
+                    </li>
+                
+                    
+                    <li class="tabs">
+                        <a href="../my-account/myaccount.html">My account</a>
+                    </li>
+                    <li class="tabs">
+                        <a href="../register/register.html">Register</a>
+                    </li>
+                    <li class="tabs">
+                        <a href="../trade/tradein.html">Trade</a>
+                    </li>
+                    <li class="tabs">
+                        <a href="#Foo" onclick="news()">Contact us</a>
+                    </li>
+                    <li class="tabs">
+                        <a href="../about-us/about_us.html">About us</a>
+                    </li>
+                    <li class="tabs">
+                        <a href="../albums/product.html">Collections</a> 
+                    </li>
+
+                </ol>
+            </nav>
+            
+        </div>
+    </header>
+
+    <!-- Summer sales container -->
+
+        <div class="toppart" style="background-image: url(banner.jpg);"> 
+
+
+                <h2 class="intro_banner">
+                    Summer's here! <br> Get up to 30% off.
+                </h2>
+                <p class="introp">
+                
+                    During your holidays, we would like to offer you discounts
+                    after registering. Please go and <b>sign up</b> for exciting benefits.
+                    
+                </p>
+
+                <button class="shop">
+                    <a href="../albums/product.html" class="shopping">Shop Now</a>
+        
+                </button>
+        </div>
+
+        <!-- A container for collaboration section -->
+
+        <div class="collab_div">
+
+            <h1 class="collab">Best of Our Collaborations</h1>
+
+        </div>
+  
+        <div class="collection_container">
+                
+            <div class="kanye_west">
+
+               <img src="kanyewest.jpg" alt="" class="ye-img">
+               <div class="kanye">Kanye West</div>
+               <button class="west"><a href="../artist-description/kanye.html" style="text-decoration: none; color: gray;">Learn more</a></button>
+
+            </div>
+
+            <div class="50cent">
+                
+                <img src="50cent.jpg" alt="" class="cent-img">
+                <div class="cent">50 cent</div>
+                <button class="cento">Learn more</button>
+ 
+            </div>
+
+            <div class="eminem">
+                
+                <img src="eminem.jpg" alt="" class="em-img">
+                <div class="emi">Eminem</div>
+                <button class="emibtn">Learn more</button>
+ 
+            </div>
+
+    </div>
+
+    <!--- End of Minn's part -->
+
+<!----------------------------------------------------------------------------------------->
+
+    <!--- Code written by Rohit, Contributed and Edited by Tauqeer, Minn, and Hamza -->
+    
+    <!--- A container for news receiving email -->
+
+    <div class="suggest">
+        <h1 id="news">Get latest news on drops</h1>
+        <div id="container">
+        <form>
+
+        <input type="text" id="name" name="name" placeholder="Your name.." required>
+        <input type="text" id="email" name="email" placeholder="Your email..">
+        <input type="text" id="subject" name="subject" placeholder="Subject..">
+        <textarea id="message" name="message" placeholder="Write your message here.."></textarea>
+        <input type="button" value="Send Message" class="btn" onclick="welcome()">
+        
+        </form>
+    </div>
+    <div id="alert">
+
+    </div>
+  
+    <div class="contact-us">
+
+    <h2 class="contact">Contact Us</h2>
+    <p class="parasuggest">
+    Email: curtin@students.com <br>
+    Phone: +9716832430 <br>
+    Visit our social profiles:</p> <br>
+
+    <div class="social-icons">
+      <a><i class="fa fa-linkedin" aria-hidden="true"></i>   LinkedIn &nbsp; &nbsp;
+      <i class="fa fa-instagram" aria-hidden="true"></i>  Instagram   &nbsp; &nbsp;
+      <i class="fa fa-twitter" aria-hidden="true"></i>  Twitter    </a> <br>
+    </div>
+
+    </div>
+    <div>
+        <p> <br> </p>
+    </div>
+</div>
+
+</body>
+
+</html>

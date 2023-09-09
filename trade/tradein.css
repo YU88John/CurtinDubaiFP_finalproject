@@ -1,0 +1,109 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#success{
+  text-align: center;
+}
+
+
+form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 38px;
+  background-color: #FCF9F9;
+  box-shadow: 1px 1px 3px 1px #ccc;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button{
+  margin-left: 12pt;
+}
+
+
+.Button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Cancel-button,
+.submit-button {
+  height: 35pt;
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover{
+  background-color: #035340; 
+}
+
+.Cancel-button:hover{
+  background-color: #000000;
+}
+
+.Cancel-button {
+  background-color: #8c7272;
+  border: none;
+  color: #fff;
+  font-size: 12pt;
+}
+
+.submit-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 12pt;
+}
+nav.return{
+  position: relative;
+}
+
+ol.home_bar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+li.tab_return {
+  float: left; 
+  padding: 10px 40px;
+  margin-left: 25pt;
+  font-size: 12pt;
+  }
+
+li.tab_return a{
+  color: white;
+  text-decoration: none;
+}
+
+li a:hover {
+      color: #DFDF68; 
+    }
+
+select{
+  width: 220pt;
+  height: 25pt;
+  font-size: 11pt;
+}

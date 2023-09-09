@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign-up</title>
+
+    <!--- External CSS reference -->
+
+    <link rel="stylesheet" href="register.css">
+
+    <!--- Font Awesome reference -->
+
+    <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+
+    <!--- External JS reference -->
+
+    <script src="register.js"></script>
+
+</head>
+<body>
+    <div class="first_nav">
+
+        <nav class="return">
+
+            <ol class="home_bar">
+
+                <li class="tab_return">
+                    <a href="../landing/ecom.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>  Home</a>
+                </li>
+                <li class="tab_return">
+                    <a href="../albums/product.html">Collections</a> 
+                </li>
+                <li class="tab_return">
+                    <a href="../landing/ecom.html">Contact us</a> 
+                </li>
+
+            </ol>
+
+        </nav>
+
+    </div>
+
+        <h1 class="account">Create your Account</h1>
+        <p class="create">Please fill in this form to create an account.</p>
+        <hr>
+
+    <div id="welcomeMsg">
+
+    </div>
+    <div id="whole">
+    <div id="container">
+
+        <div class="form">
+
+        <label for="title">Choose a title: </label>
+        <select name="gender" id="title">
+            <option value="Mr.">Mr.</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Ms.">Ms.</option>
+        </select>
+        <p>Name: <br> <input type="text" placeholder="Enter Name" id="name"></p>
+        <p>Email: <br> <input type="text" placeholder="Enter email" id="email"></p>
+        <p>Password: <br> <input type="password" placeholder="Enter a strong password" id="pwd"></p>
+        <p>Retype Password: <br> <input type="password" placeholder="Retype the password" id="rpwd"></p>
+
+        </div>
+
+        <div class="image">
+        <img src="logo_register.jpg" alt="Millennial Records" width="500" class="logo">
+        </div>
+    </div>
+    <div class="Registration">
+        <p> <input type="checkbox" id="check" checked> By creating an account you agree to our <a href="#" style="color:rgb(21, 79, 238)">Terms & Privacy</a>.</p>
+        
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="button" class="signupbtn" onclick="check()">Sign Up</button> <br> <br> <br> <br>
+    </div> 
+    </div>
+
+</body>
+</html>
+

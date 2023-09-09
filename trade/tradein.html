@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Trade-In Form</title>
+  <link rel="stylesheet" href="tradein.css">
+  <script>
+  
+   function validateForm() {
+      let album = document.getElementById("albumName").value;
+      let price = document.getElementById("expectedPrice").value;
+      let genre = document.getElementById("musicGenres").value;
+      let artist = document.getElementById("preferredArtists").value;
+      if (album == "" || price == ""){
+        alert("Please fill in all the fields")
+      }
+      else{
+      document.getElementById("form_body").style.display = "none";
+      document.getElementById("success").innerHTML = "<h1>Success!</h1>" + 
+      "<p>Your form will be reviewed by admin team within 5-10 business days.</p>" + 
+      "<br> Your choices are " + genre + " as a genre and " + artist + " as the artist."
+      }
+    } 
+
+  </script>
+
+</head>
+
+<body>
+  <div class="first_nav">
+
+    <nav class="return">
+
+        <ol class="home_bar">
+
+            <li class="tab_return">
+                <a href="../landing/ecom.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>  Home</a>
+            </li>
+            <li class="tab_return">
+              <a href="../albums/product.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>  Shop</a>
+            </li>
+
+        </ol>
+
+    </nav>
+
+</div>
+<div id="success">
+
+</div>
+
+<div id="form_body">
+  <h1>Trade-In Form</h1>
+  <div class="trading">
+  
+  <form>
+    <label for="albumName">Album Name:</label>
+    <input type="text" id="albumName" name="albumName" required>
+    <br>
+    <br>
+
+    <label for="expectedPrice">Expected Price:</label>
+    <input type="number" id="expectedPrice" name="expectedPrice" required>
+    <br>
+    <br>
+
+    <label for="musicGenres">Music Genres:</label>
+    <select id="musicGenres" name="musicGenres">
+      <option value="R&B">R&B</option>
+      <option value="RocknRoll">RocknRoll</option>
+      <option value="Hip-Hop">Hip-Hop</option>
+      <option value="Jazz&Soul">Jazz&Soul</option>
+      <option value="90's Hip-Hop">90's Hip-Hop</option>
+      <option value="70's Soul music">70's Soul music</option>
+      <option value="00's Hip-Hop music">00's Hip-Hop music</option>
+      </select>
+    
+    <br>
+    <br>
+
+    <label for="preferredArtists">Preferred Artists:</label>
+    <select id="preferredArtists" name="preferredArtists">
+    <option value="50 cent">50 Cent</option>
+    <Option value="Eminem">Eminem</Option>
+    <option value="Asap Rocky">Asap Rocky</option>
+    <option value="Kanye West">Kanye West</option>
+    <option value="Not specified">Browse More</option>
+    </select>
+    <br>
+    <br>
+
+    <div class="Button-container">
+      <button type="button" class="Cancel-button" onclick="clearForm()">Cancel</button>
+      <button type="button" class="submit-button" value="Submit" onclick="validateForm()">Submit</button>
+    </div>
+  </form>
+  </div>
+</div>
+
+  <script>
+    function clearForm() {
+      document.getElementById("albumName").value = "";
+      document.getElementById("expectedPrice").value = "";
+      document.getElementById("musicGenres").value = "";
+      document.getElementById("preferredArtists").value = "";
+    }
+  </script>
+</body>
+
+</html>

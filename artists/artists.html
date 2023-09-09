@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists</title>
+     <!--- Fontawesome icons for LinkedIn and social icons -->
+
+     <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+    <style>
+        body{
+            max-width: 100%;
+        }
+        img{
+            box-shadow: 7px 0px 3px 5px #000000;
+            margin-top: 28pt;
+            margin-left: 460pt;
+            border-radius: 4pt;
+        }
+        p{
+            margin-left: 520pt;
+        }
+        .artists-cont{
+            display: inline;
+        }
+        h1{
+            text-align: center;
+            font-size: 35pt;
+        }
+        
+nav.return{
+  position: relative;
+}
+
+ol.home_bar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+li.tab_return {
+  float: left; 
+  padding: 10px 40px;
+  margin-left: 25pt;
+  font-size: 12pt;
+  }
+
+li.tab_return a{
+  color: white;
+  text-decoration: none;
+}
+
+li a:hover {
+      color: #DFDF68; 
+    }
+    </style>
+    <script>
+        function hidecap(){
+            document.getElementById("cap").innerHTML = ""
+        }
+        function cap(){
+            document.getElementById("cap").innerHTML = "50 cent"
+        }
+
+        function hidecap1(){
+            document.getElementById("cap1").innerHTML = ""
+        }
+        function cap1(){
+            document.getElementById("cap1").innerHTML = "Kanye"
+        }
+
+        function hidecap2(){
+            document.getElementById("cap2").innerHTML = ""
+        }
+        function cap2(){
+            document.getElementById("cap2").innerHTML = "Eminem"
+        }
+
+        function hidecap3(){
+            document.getElementById("cap3").innerHTML = ""
+        }
+        function cap3(){
+            document.getElementById("cap3").innerHTML = "Kendrick"
+        }
+
+        function hidecap4(){
+            document.getElementById("cap4").innerHTML = ""
+        }
+        function cap4(){
+            document.getElementById("cap4").innerHTML = "Drake"
+        }
+    </script>
+</head>
+<body>
+    <div class="first_nav">
+
+        <nav class="return">
+
+            <ol class="home_bar">
+
+                <li class="tab_return">
+                    <a href="../landing/ecom.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>  Home</a>
+                </li>
+                <li class="tab_return">
+                    <a href="../albums/product.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>  Shop</a>
+                  </li>
+
+            </ol>
+
+        </nav>
+
+    </div>
+
+    <h1>Our most famous artists</h1>
+
+<div class="artists-cont">
+
+    <img id="img1" onmouseover="cap()" onmouseout="hidecap()" src="50cent.jpg" width="250">
+    <p id="cap" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20pt;"></p>
+
+<img onmouseover="cap1()" onmouseout="hidecap1()" src="kanyewest.jpg" width="250">
+<p id="cap1" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 20pt;"></p>
+
+<img onmouseover="cap2()" onmouseout="hidecap2()" src="eminem.jpg" width="250">
+<p id="cap2" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 20pt;"></p>
+
+<img onmouseover="cap3()" onmouseout="hidecap3()" src="ken.jpg" width="250">
+<p id="cap3" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 20pt;"></p>
+
+<img onmouseover="cap4()" onmouseout="hidecap4()" src="drake.jpg" width="250">
+<p id="cap4" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 20pt;"></p>
+
+</div> <br> <br> <br>
+</body>
+</html>

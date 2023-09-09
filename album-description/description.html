@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--- Fontawesome icons for LinkedIn and social icons -->
+
+    <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F4F4EF;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    } 
+
+/* navigation bar */ 
+
+  nav.return{
+  position: relative;
+  background-color: #000;
+  display: inline;
+  
+}
+
+
+ol.home_bar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+li.tab_return {
+  float: left; 
+  padding: 10px 40px;
+  margin-left: 25pt;
+  font-size: 12pt;
+  }
+
+li.tab_return a{
+  color: white;
+  text-decoration: none;
+}
+
+
+    .container {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      margin-top: 40px; /* Adjust margin to make space for the navigation bar */
+    }
+    
+    .album-image {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      margin-right: 20px;
+      align-self: center;
+    }
+    
+    p {
+      line-height: 1.5;
+      color: #666;
+    }
+    
+    h2 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    ol{
+      text-align: left;
+    }
+
+    /* Added styles for the navigation bar wrapper */
+    .nav-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #FFF;
+      z-index: 9999;
+    }
+
+    /* Added styles for the navigation bar */
+   
+
+    /* Added styles for the wishlist button */
+    .wishlist-button {
+      padding: 5px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+    .wishlist-button:hover {
+      transform: scale(1.2);
+    }
+
+    .wishlist-button::before {
+      content: "\2665";
+    }
+
+    /* Added styles for the tooltip */
+    .wishlist-button-tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: help;
+    }
+
+    .wishlist-button-tooltip .tooltip-text {
+      visibility: hidden;
+      width: 120px;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 5px;
+      border-radius: 6px;
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .wishlist-button-tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Added a wrapper div for the navigation bar -->
+<header>
+<div class="first_nav">
+    <nav class="return">
+
+        <ol class="home_bar">
+
+            <li class="tab_return">
+                <a href="../landing/ecom.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>  Home</a>
+            </li>
+            <li class="tab_return">
+              <a href="../albums/product.html"><i class="fa fa-arrow-left" aria-hidden="true"></i>  Return</a>
+            </li>
+            <li class="tab_return">
+                <a href="../cart/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Cart</a>
+            </li>
+            
+        </ol>
+
+    </nav>
+</div>
+</header>
+
+  <div class="container">
+    <img src="808s_&_Heartbreak.png" alt="Album Cover" class="album-image">
+    
+    <div class="content">
+      <h2>Album: <span id="albumTitle">808S & HEARTBREAK</span></h2>
+      
+      <p><strong>Artist:</strong> Kanye West</p>
+      
+      <h3>Description</h3>
+      <p>808s & Heartbreak is the fourth studio album by American rapper Kanye West.</p>
+      
+      <h3>Tracklist</h3>
+      <ol>
+        <li>Say You Will</li>
+        <li>Welcome To Heartbreak</li>
+        <li>Heartless</li>
+      </ol>
+      
+      <div>
+        <button class="buy-button">Buy Now</button>
+        <div class="wishlist-button-tooltip">
+          <button class="wishlist-button"></button>
+          <span class="tooltip-text">Add to Wishlist</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

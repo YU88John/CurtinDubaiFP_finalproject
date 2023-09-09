@@ -1,0 +1,113 @@
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    a.home{
+        text-decoration: none;
+        font-size: 14pt;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: #fff;
+    }
+
+    a:hover{
+        color: #DFDF68;
+    }
+
+    .header {
+      background-color: #000000;
+      color: #fff;
+      padding: 3px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 40pt;
+    }
+
+    h1 {
+        font-size: 30pt;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+
+    p.mil{
+        font-size: 13pt;  
+        text-align: justify;  
+        line-height: 2.3;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 55pt;
+      word-spacing: 80pt;
+    }
+
+    .image {
+      width: 23%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .image img {
+      width: 160pt;
+      height: 200px;
+      margin-right: 5pt;
+      object-fit: cover;
+    }
+
+    .image h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .image:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline; /* Align items vertically */
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    .bottom-left {
+      font-size: 28px;
+    }
+
+    .bottom-right {
+      margin-left: 20px; /* Add margin for spacing */
+      font-size: 28px; /* Adjusted font size for consistency */
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+    h2{
+      margin-top: 30pt;
+    }

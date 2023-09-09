@@ -1,0 +1,132 @@
+/* cart.css */
+
+body {
+    font-family: 'Cambay', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  header .banner_logo {
+    width: 80px;
+  }
+  
+  h1.featured {
+    text-align: center;
+    margin: 20px;
+    font-size: 32pt;
+  }
+  
+  .cart-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .cart-product {
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 280px;
+  }
+  
+  .cart-product img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .cart-product .album_name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .cart-product .artist {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .cart-product .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Optional styles for the Add to Cart button */
+  .cart-product .add-to-cart {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cart-product .add-to-cart:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Optional styles for the cart page header */
+  .cart-header {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Optional styles for the cart total */
+  .cart-total {
+    text-align: right;
+    margin: 20px;
+    margin-right: 190pt;
+    font-size: 24px;
+  }
+  
+  /* Optional styles for the checkout button */
+  .checkout-button {
+    float: right;
+    display: block;
+    text-align: center;
+    font-size: 13.5pt;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 200pt;
+    margin-bottom: 150pt;
+  }
+  
+  .checkout-button:hover {
+    background-color: #1e7e34;
+  }
+
+  /* clear cart button */
+  .clear-cart-btn{
+    background-color: #900303;
+    color: white;
+    cursor: pointer;
+    font-size: 12pt;
+    padding: 9pt;
+    border-radius: 3.5pt;
+    float: left;
+    margin-top: 28pt;
+    margin-left: 60pt;
+  }
+
+  .clear-cart-btn:hover{
+    background-color: red;
+  }
+  

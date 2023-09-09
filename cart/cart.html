@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+    <link href='https://fonts.googleapis.com/css?family=Cambay' rel='stylesheet'>
+
+<!-- Code written/edited by all members -->
+
+    <style>
+
+        nav.return{
+          position: relative;
+        }
+        
+        ol.home_bar{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #000000; 
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        li.tab_return {
+          float: left; 
+          padding: 10px 40px;
+          margin-left: 25pt;
+          font-size: 12pt;
+          }
+        
+        li.tab_return a{
+          color: white;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+              color: #DFDF68; 
+            }
+        
+            </style>
+</head>
+<body>
+    
+    <div class="first_nav">
+
+        <nav class="return">
+
+            <ol class="home_bar">
+
+                <li class="tab_return">
+                    <a href="../landing/ecom.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>  Home</a>
+                </li>
+                <li class="tab_return">
+                    <a href="../albums/product.html"><i class="fa fa-arrow-left" aria-hidden="true"></i>   Return</a>
+                </li>
+
+            </ol>
+
+        </nav>
+
+    </div>
+
+    <h1 class="featured">Shopping Cart</h1>
+
+    <div class="cart-products">
+        <!-- Cart products will be dynamically added here -->
+    </div>
+
+    <!-- Cart footer with Clear Cart, Total, and Checkout buttons -->
+    <div class="cart-footer">
+        <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+        <div class="cart-total">Total: $<span id="total-amount">0</span></div>
+        <button class="checkout-button" onclick="checkout()">Checkout</button>
+    </div>
+
+    <script>
+        // Function to render cart items from localStorage
+        function renderCartItems() {
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+            // Select the container to append cart items
+            const cartProducts = document.querySelector(".cart-products");
+            cartProducts.innerHTML = "";
+
+            // Loop through cart items and create product cards
+            cartItems.forEach((item, index) => {
+                const productCard = `
+                    <div class="cart-product">
+                        <img src="${item.imageURL}" alt="Product Image">
+                        <div class="product-details">
+                            <h2 class="album_name">${item.albumName}</h2>
+                            <h4 class="artist">${item.artistName}</h4>
+                            <span class="price">${item.price}</span>
+                            <!-- Quantity buttons -->
+                            <div class="quantity">
+                                <button class="quantity-btn" onclick="decreaseItem(${index})">-</button>
+                                <span class="item-quantity">${item.quantity || 1}</span>
+                                <button class="quantity-btn" onclick="increaseItem(${index})">+</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                cartProducts.innerHTML += productCard;
+            });
+        }
+
+        // Function to clear the cart
+        function clearCart() {
+            localStorage.removeItem("cartItems");
+            renderCartItems(); // Update the cart display after clearing
+            updateTotalDisplay(); // Update the displayed total amount after clearing
+        }
+
+        // Function to increase the quantity of an item
+        function increaseItem(index) {
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            cartItems[index].quantity = (cartItems[index].quantity || 1) + 1;
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+            renderCartItems(); // Update the cart display after increasing the quantity
+            updateTotalDisplay(); // Update the displayed total amount after increasing the quantity
+        }
+
+        // Function to decrease the quantity of an item
+        function decreaseItem(index) {
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            if (cartItems[index].quantity && cartItems[index].quantity > 1) {
+                cartItems[index].quantity -= 1;
+                localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                renderCartItems(); // Update the cart display after decreasing the quantity
+                updateTotalDisplay(); // Update the displayed total amount after decreasing the quantity
+            }
+        }
+
+        // Function to calculate the total price of all items in the cart
+        function calculateTotal() {
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            let total = 0;
+
+            cartItems.forEach(item => {
+                const itemPrice = parseFloat(item.price.replace("$", ""));
+                const itemQuantity = item.quantity || 1;
+                total += itemPrice * itemQuantity;
+            });
+
+            return total;
+        }
+
+        // Function to update the displayed total amount
+        function updateTotalDisplay() {
+            const totalAmountSpan = document.getElementById("total-amount");
+            const totalAmount = calculateTotal().toFixed(2); // Convert to 2 decimal places
+            totalAmountSpan.textContent = totalAmount;
+        }
+
+        // Call the function to render cart items and update the total amount when the cart page loads
+        window.onload = function() {
+            renderCartItems();
+            updateTotalDisplay();
+        };
+        // Function to decrease the quantity of an item
+function decreaseItem(index) {
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    if (cartItems[index].quantity && cartItems[index].quantity > 1) {
+        cartItems[index].quantity -= 1;
+    } else {
+        // If quantity becomes zero or less, remove the item from the cart
+        cartItems.splice(index, 1);
+    }
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    renderCartItems(); // Update the cart display after decreasing the quantity
+    updateTotalDisplay(); // Update the displayed total amount after decreasing the quantity
+}
+
+    </script>
+
+</body>
+</html>

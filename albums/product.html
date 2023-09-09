@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="product.css"> 
+    <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+    <link href='https://fonts.googleapis.com/css?family=Cambay' rel='stylesheet'>
+
+    <script>
+        function redirect(){
+            window.location.href = "../album-description/description.html"
+        }
+    </script>
+</head>
+
+<!--- Code written by Minn and Rohit. Edited and suggested by Tauqeer and Hamza -->
+
+<body>
+    
+    <header>
+        <div class="first_nav">
+
+            <nav class="return">
+
+                <ol class="home_bar">
+
+                    <li class="tab_return">
+                        <a href="../landing/ecom.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>  Home</a>
+                    </li>
+                    <li class="tab_return">
+                        <a href="../cart/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Cart</a>
+                    </li>
+                    
+                </ol>
+
+            </nav>
+
+        </div>
+
+        <div class="sec_nav">
+
+            <nav class="options">
+
+                <ol class="topbar">
+
+                    <li>
+                        <img src="banner-logo.jpg" alt="" class="banner_logo">
+                    </li>
+                    <li class="tabs">
+                        <a href="">Top Hits</a>
+                    </li>
+                    <li class="tabs">
+                        <a href="">Genre</a>
+                    </li>
+                    <li class="tabs">
+                        <a href="../artists/artists.html">Artists</a>
+                    </li>
+                    <li class="right_tabs">
+                        <a href="../my-account/myaccount.html"> Minn    <i class="fa fa-user-circle-o" aria-hidden="true"></i> </a>
+                    </li>
+                    <li class="right_tabs">
+                        <a href="" class="lang"><i class="fa fa-globe" aria-hidden="true"></i>   ENG</a>
+                    </li>
+
+                </ol>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <h1 class="featured">Featured</h1>
+    <div class="products">
+
+        <div class="albums_ctl"> 
+        <img src="em-alb.jpg" alt="" class="albums">
+        <h2 class="album_name">Music To Be Murdered By</h2>
+        <h4 class="artist">Eminem</h4> 
+        <span class="price">$125</span>
+        <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+        </div>
+        <div class="albums_ctl"> 
+            <img src="ts_astro.jpg" alt="" class="albums">
+            <h2 class="album_name">AstroWorld</h2>
+            <h4 class="artist">Travis Scott</h4> 
+            <span class="price">$35</span>
+            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+        </div>
+        <div class="albums_ctl"> 
+            <img src="jayz_blue.png" alt="" class="albums">
+            <h2 class="album_name">The Blueprint</h2>
+            <h4 class="artist">Jay Z</h4> 
+            <span class="price">$105</span>
+            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+        </div>
+        <div class="albums_ctl"> 
+            <img src="ts_jack.jpg" alt="" class="albums">
+            <h2 class="album_name">Jackboy</h2>
+            <h4 class="artist">Travis Scott</h4> 
+            <span class="price">$65</span>
+            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+        </div>
+        <div class="albums_ctl" onclick="redirect()"> 
+            <img src="ye_808.jpg" alt="" class="albums">
+            <h2 class="album_name">808s & Heartbreak</h2>
+            <h4 class="artist">Kanye West</h4> 
+            <span class="price">$51</span>
+            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+        </div>
+        <div class="albums_ctl"> 
+            <img src="ye_grad.jpg" alt="" class="albums">
+            <h2 class="album_name">Graduation</h2>
+            <h4 class="artist">Kanye West</h4> 
+            <span class="price">$75</span>
+            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+        </div>
+        <div class="albums_ctl"> 
+            <img src="thekid_fk.jpg" alt="" class="albums">
+            <h2 class="album_name">F*CK LOVE: SAVAGE</h2>
+            <h4 class="artist">The Kid Laroi</h4> 
+            <span class="price">$85</span>
+            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+        </div>
+        <div class="albums_ctl"> 
+            <img src="asap_testing.jpg" alt="" class="albums">
+            <h2 class="album_name">Testing</h2>
+            <h4 class="artist">A$AP ROCKY</h4> 
+            <span class="price">$50</span>
+            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+        </div>
+        <div class="albums_ctl"> 
+            <img src="em_kami.jpg" alt="" class="albums">
+            <h2 class="album_name">Kamikaze</h2>
+            <h4 class="artist">Eminem</h4> 
+            <span class="price">$62</span>
+            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+        </div>
+        <div class="albums_ctl"> 
+            <img src="em_slim.jpg" alt="" class="albums">
+            <h2 class="album_name">The Slim Shady</h2>
+            <h4 class="artist">Eminem</h4> 
+            <span class="price">$44</span>
+            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+        </div>
+
+            
+    </div>
+
+<!--- add to cart function for every time a cart icon is clicked -->
+
+    <script>
+        function addToCart(index) {
+            const albumName = document.querySelectorAll(".album_name")[index].textContent;
+            const artistName = document.querySelectorAll(".artist")[index].textContent;
+            const price = document.querySelectorAll(".price")[index].textContent;
+
+            const item = { albumName, artistName, price };
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            cartItems.push(item);
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+            alert("Item added to cart!");
+            
+            // Redirect to the cart page after adding an item to the cart
+            window.location.href = "cart.html";
+        }
+    </script>
+
+<script>
+    function addToCart(index) {
+        const albumName = document.querySelectorAll(".album_name")[index].textContent;
+        const artistName = document.querySelectorAll(".artist")[index].textContent;
+        const price = document.querySelectorAll(".price")[index].textContent;
+        const imageURL = document.querySelectorAll(".albums")[index].getAttribute("src");
+
+        const item = { albumName, artistName, price, imageURL };
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        cartItems.push(item);
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+        alert("Item added to cart!");
+    }
+
+    // Add event listeners to "Add to Cart" buttons
+    const addToCartButtons = document.querySelectorAll(".cart");
+    addToCartButtons.forEach((button, index) => {
+        button.addEventListener("click", () => addToCart(index));
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: #000000;
+}
+* {
+    box-sizing: border-box;
+}
+
+nav.return{
+    position: relative;
+  }
+  
+  ol.home_bar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  li.tab_return {
+    float: left; 
+    padding: 10px 40px;
+    margin-left: 25pt;
+    font-size: 12pt;
+    }
+  
+  li.tab_return a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+        color: #DFDF68; 
+      }
+
+.account{
+    margin-left: 28pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}   
+
+p.create{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 29pt;
+}
+
+#container {
+    display: flex;
+    align-items: center; 
+    column-gap: 1pt;
+    padding: 12px;
+   }
+   
+   img {
+     max-width: 100%;
+     max-height:100%;
+     float: right;
+     margin-left: 300pt;
+   }
+   
+   .form {
+     font-size: 13pt;
+     float: left;
+     margin-left: 24pt;
+     background-color: #F8F8F8; 
+     padding: 18pt;
+     box-shadow: 0px 0px 4px 2px #E5E5E5; 
+   }
+
+input[type="text"],
+input[type="password"] {
+    width: 350px;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #DAD6D6;
+    border-radius: 2pt;
+    box-shadow: 0px 1px 2px 0px #ccc;
+}
+input[type="text"],
+input[type="password"]  {
+    background-color: #DAD6D6;
+    width: 310pt;
+    height: 35pt;
+    border: none;
+    margin-top: 5.3pt;
+}
+
+hr {
+    border: 0.3px solid;
+    margin-bottom: 15px;
+}
+button {
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    opacity: 0.9;
+}
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+.cancelbtn,
+.signupbtn {
+    float: left;
+    margin-left: 40pt;
+    width: 80pt;
+    border-radius: 5pt;
+}
+.cancelbtn:hover{
+    background-color: red;
+}
+
+.signupbtn:hover{
+    background-color: gray;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+div.Registration {
+    margin-left: 34pt;
+}
+
+.image{
+    margin-right: 100pt;
+}
+
+#check{
+    cursor: pointer;
+}
+
+#welcomeMsg{
+    margin-top: 20pt;
+    font-size: 27pt;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 55pt;
+}
+
+select{
+    width: 50pt;
+    height: 28pt;
+    margin-left: 12pt;
+    font-size: 11.5pt;
+    background-color: #DAD6D6;
+    color: #000000;
+    border: #ccc;
+    border-radius: 1.7pt;
+    box-shadow: 0px 0px 1.5px 0px #ccc;
+}
